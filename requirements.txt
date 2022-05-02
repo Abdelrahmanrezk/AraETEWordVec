@@ -11,3 +11,6 @@ schedule
 geopy
 fake-useragent
 googletransx
+twint
+sklearn
+langdetect
