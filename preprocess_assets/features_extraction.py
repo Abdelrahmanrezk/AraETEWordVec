@@ -2,7 +2,7 @@
 from keras.preprocessing.sequence import pad_sequences
 from gensim.models import Word2Vec
 import pickle
-import keras
+from tensorflow import keras 
 
 # Our files
 # from configs import *

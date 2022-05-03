@@ -16,4 +16,6 @@ sklearn
 langdetect
 nltk
 emojis
+Pillow
 matplotlib
+gensim
