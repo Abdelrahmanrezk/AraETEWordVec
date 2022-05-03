@@ -376,8 +376,11 @@ def clean_str(text):
 def clean_list_of_text(text_list, clean_str=clean_str):
     cleaned_arabic_tweets = []
     for i, tweet in enumerate(text_list):
-        tweet                                   = clean_str(tweet)
-        cleaned_arabic_tweets += [tweet]
+        try:
+            tweet                                   = clean_str(tweet)
+            cleaned_arabic_tweets += [tweet]
+        except:
+            print(i)
     return cleaned_arabic_tweets
 
 def convert_class_to_label(dialects):

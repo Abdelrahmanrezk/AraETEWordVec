@@ -74,7 +74,7 @@ def Stratified_split_and_shuffle(data, dialect_col_to_split_on, split_percentage
 
 ########################### Start to get how many instances for each class
 
-def dialect_proportions(data):
+def dialect_proportions(data, col_name="dialect"):
     '''
     The function used to get percentage of how many instances(samples) of each class we have.
     Argument
@@ -82,7 +82,7 @@ def dialect_proportions(data):
     Return
         prop_sampels_per_class : array, proportions of each class counts
     '''
-    prop_sampels_per_class = data["dialect"].value_counts() / len(data)
+    prop_sampels_per_class = data[col_name].value_counts() / len(data)
     return prop_sampels_per_class
 
 ########################### End of get how many instances for each class
@@ -92,7 +92,7 @@ def dialect_proportions(data):
 
 ########################### Start to compare the two shuffling method we use
 
-def compare_random_and_stratified_split(dialect_dataset, test_set, strat_test_set):
+def compare_random_and_stratified_split(dialect_dataset, test_set, strat_test_set, col_name="dialect"):
     '''
     The function used to compare how its random and stratified split are from spliting our data, 
     the second one ensure that we have proportions of each class instances related to what in the orginal data.
@@ -105,9 +105,9 @@ def compare_random_and_stratified_split(dialect_dataset, test_set, strat_test_se
     '''
     
     # Get percentage of the number of instances per class for each dataset
-    overall                              = dialect_proportions(dialect_dataset)
-    random_test                          = dialect_proportions(test_set)
-    stratified_test                      = dialect_proportions(strat_test_set)
+    overall                              = dialect_proportions(dialect_dataset, col_name)
+    random_test                          = dialect_proportions(test_set, col_name)
+    stratified_test                      = dialect_proportions(strat_test_set, col_name)
     comp_prop_dict                       = { 'Overall': overall,  'stratified_test': stratified_test,   'random_test':random_test }
     comp_prop                            = pd.DataFrame(comp_prop_dict)
     

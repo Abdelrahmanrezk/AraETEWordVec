@@ -14,3 +14,6 @@ googletransx
 twint
 sklearn
 langdetect
+nltk
+emojis
+matplotlib
