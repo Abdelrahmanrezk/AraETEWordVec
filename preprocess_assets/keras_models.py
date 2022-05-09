@@ -10,8 +10,9 @@ import numpy as np
 from sklearn.metrics import f1_score
 
 
-TENSOR_DIR = os.path.join(os.curdir, "models", "dl_models", 'tensor_logs/')
-MODELS_DIR = os.path.join(os.curdir, "models", "dl_models/") 
+
+TENSOR_DIR = os.path.join(os.curdir, "../test_models", "dl_models", 'tensor_logs/')
+MODELS_DIR = os.path.join(os.curdir, "../test_models", "dl_models/") 
 
 
 def get_run_tensor_logdir(run_hyper_params, tensor_dir=TENSOR_DIR):
@@ -132,3 +133,6 @@ def keras_callbacks(word2vec_type, model_type, learning_rate):
     callbacks = [cb_early_stop, cb_check_point, cb_tensor_board]
 
     return callbacks
+
+
+
