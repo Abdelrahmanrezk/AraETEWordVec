@@ -10,9 +10,8 @@ import numpy as np
 from sklearn.metrics import f1_score
 
 
-
-TENSOR_DIR = os.path.join(os.curdir, "../test_models", "dl_models", 'tensor_logs/')
-MODELS_DIR = os.path.join(os.curdir, "../test_models", "dl_models/") 
+TENSOR_DIR = os.path.join("../test_models/ml_models_saved", "dl_models", 'tensor_logs/')
+MODELS_DIR = os.path.join("../test_models/ml_models_saved", "dl_models/") 
 
 
 def get_run_tensor_logdir(run_hyper_params, tensor_dir=TENSOR_DIR):
@@ -117,7 +116,8 @@ def keras_callbacks(word2vec_type, model_type, learning_rate):
      # Handle the different runs for the model to easily monitor from tensor board
     hyper_params = word2vec_type + "_" + model_type + "_learning_rate=" + str(learning_rate) + "_"
     run_log_dir = get_run_tensor_logdir(hyper_params, TENSOR_DIR)
-
+    print(hyper_params)
+    print(run_log_dir)
     cb_tensor_board = keras.callbacks.TensorBoard(run_log_dir)
 
     # Once there is no progress stop the model and retrive the best weights
@@ -133,6 +133,3 @@ def keras_callbacks(word2vec_type, model_type, learning_rate):
     callbacks = [cb_early_stop, cb_check_point, cb_tensor_board]
 
     return callbacks
-
-
-
