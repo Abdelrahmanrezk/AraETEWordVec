@@ -127,7 +127,12 @@ _ = word_display(tsne_df_scale, NER_WORDS, "NER_WORDS.png")
 <img src="images/NER_WORDS_2.png">
 
 
-## Coronavirus Dataset
+## Model Compare
+
+**Here we have compare the result of our Arabic word2vec model on different dataset, with other benchmark Arabic word2vec models.**
+
+### On Arabic Coronavirus Dataset
+
 
 | ML/Word2Vec  | DL Model F1_score | ML Model F1_score| 
 | --- | --- | --- |
@@ -140,6 +145,22 @@ _ = word_display(tsne_df_scale, NER_WORDS, "NER_WORDS.png")
 |Our Skip Gram Negative Sampling | 93% | 92% |
 |Eng. Abo Bakr Skip Gram Negative Sampling | No Model | No Model |
 |Dr.Mohammed Skip Gram Negative Sampling | No Model | No Model |
+
+### On Arabic Sentiment Tweets Dataset
+
+| ML/Word2Vec  | DL Model F1_score | ML Model F1_score| 
+| --- | --- | --- |
+|Our CBOW | 66% | 67% |
+|Eng. Abo Bakr CBOW | 63% | 65% |
+|Dr.Mohammed CBOW | 61% | 69% |
+|Our Skip-Gram | 67% | 65% |
+|Eng.Abo Bakr  Skip Gram | 67% | 64% |
+|Dr.Mohammed  Skip Gram | 65% | 62% |
+|Our Skip Gram Negative Sampling | 70% | 67% |
+|Eng. Abo Bakr Skip Gram Negative Sampling | No Model | No Model |
+|Dr.Mohammed Skip Gram Negative Sampling | No Model | No Model |
+
+
 ## How to use to train your ML or DL Model
 
 Once you download the model you need, check the "test_models/", you will see different ML models and DL models that you can train with the related datasets.
