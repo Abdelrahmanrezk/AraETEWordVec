@@ -7,6 +7,13 @@ This work compared to famous paper AraVec by Abu Bakr and his teammates and othe
 
 ## Full-Gram Models
 
+| Description | Tweets No. | Tokens No. | Vocab No. | Vec-Size | Model Download Link |
+| --- | --- | --- | --- |  --- | --- |
+| Twitter CBOW | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1zkzBhVlb0hTnN5bU59HTGFOh2w4Wj_Pq?usp=sharing) |
+| git diff | Show file differences that haven't been staged |
+
+
+
 Model    | Tweets No.     | Tokens No. | Vocab No. | Vec-Size		| Download      |
 -----    | --------       | ----------  |           | ---------	    | --------- 	|
 
