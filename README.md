@@ -3,13 +3,23 @@
 
 We provide our paper with code used for that research from first stage of collecting more than 350 million tweet, to provide free word embedding in Arabic language and run on different dataset to see the model ability compared to other available models.
 
+This work compared to famous paper AraVec by Abu Bakr and his teammates and other papers.
 
-We will start by some examples to show our work, then we will start to let you know how you can go from collecting data to the end of research.
+## Full-Gram Models
 
+Model    | Tweets No.     | Tokens No. | Vocab No. | Vec-Size		| Download      |
+-----    | --------       | ----------  |           | ---------	    | --------- 	|
 
+Twitter CBOW| 189,141,269|7,019,276,208  |2,027,042           | 300-	    | --------- 	|
 
+Twitter Skip-Gram    | --------          | ----------  |           | ---------	    | --------- 	|
+Twitter Skip-Gram-Negative-Sampling       | --------          | ----------  |           | ---------	    | --------- 	|
 
 ## How to use to get Similar words & others
+
+Once you download the model you need, check the "notebook/compare_3.ipynb", you will see different comparison from other models with our models.
+
+**Some codes, but you have to check the full code you will enjoy that**
 
 ```
 
@@ -45,23 +55,8 @@ print(similar_tokens)
  ('😀', 0.7618412375450134)]
 '''
 
-similar_tokens = rezk_model.wv.most_similar('🇰🇼')
-print(similar_tokens)
-
-'''
-[('🇴🇲', 0.6610525846481323),
- ('العيد_الوطني_الكويتي', 0.6014205813407898),
- ('اليوم_الوطني_الكويتي', 0.5943148732185364),
- ('🇦🇪', 0.5859056711196899),
- ('الكويت', 0.5772003531455994),
- ('🇸🇦', 0.5617915987968445),
- ('🇶🇦', 0.5346092581748962),
- ('عمان', 0.5341886281967163),
- ('🇯🇴', 0.5333636999130249),
- ('الحبيبه', 0.5255107283592224)]
-'''
-
-similar_tokens = rezk_model.wv.most_similar('كوفيد')
+text = text_to_clean('كوفيد').replace(' ', '_')
+similar_tokens = rezk_model.wv.most_similar(text)
 print(similar_tokens)
 
 '''
@@ -76,8 +71,8 @@ print(similar_tokens)
  ('بـكوفيد-', 0.600813090801239),
  ('فيروس', 0.5611270666122437)]
 '''
-
-similar_tokens = rezk_model.wv.most_similar('منصه_مدرستي')
+text = text_to_clean('منصه مدرستي').replace(' ', '_')
+similar_tokens = rezk_model.wv.most_similar(text)
 print(similar_tokens)
 
 '''
@@ -94,12 +89,7 @@ print(similar_tokens)
 
 '''
 
-NER_WORDS = ["نت", "انستجرام", "فيسبوك", "IT", "HR", "AI", "راوتر", "مودم", "رسيفر", "marketing", "الدبابات", "المدرعات", "الطائرات", 
-             "شاومي", "سوني", "لينوفو", "سامسونج", "هواوي", "ايفون", "الصواريخ", "الرادار", "الباصات", "القطار", "السياره", "الدراجه",
-             "سوني", "تويتر", "سنابشات", "الواتساب", "design", "اكتوبر", "يونيو", "اغسطس", "نوفمبر", "مايو", "تموز", "شباط", "ايلول",
-             "محمد", "ابراهيم", "عيسي", "اسماعيل", "هند", "ساره", "مرام", "ريما", "خلود",
-            "ايران", "تركيا", "البحرين", "الكويت", "قطر", "السودان", "الجزائر", "تونس", "مصر",
-            "مختبر", "مركز", "بلديه", "نقابه", "جمعيه", "شركه", "مؤسسه", "معهد", "اكاديميه"]
+
 
 
 # Using functions in side word2vec_results.py to display graphs in image below
@@ -113,31 +103,12 @@ _ = word_display(tsne_df_scale, NER_WORDS, "NER_WORDS.png")
 
 ```
 
-### 
 <img src="images/NER_WORDS_2.png">
 
 
 ## How to use to train your ML or DL Model
 
+Once you download the model you need, check the "test_models/", you will see different ML models and DL models that you can train with the related datasets.
 
 
-### Collecting Tweets
 
-To collect this large dataset we have used twint project that help you collect very large number of tweets instead of waiting months to collect your dataset using twitter API, and as to be legal with twittter developer we have not provide this dataset except for resarch work.
-
-```python
-
-pip3 install -r requirements.txt
-
-# or you have to clone the project in case of error(I have doing that)
-# https://github.com/twintproject/twint
-```
-
-This work of collecting this large number of tweets is splited into two files:
-- create directories from 2008 to 2021
-- inside each of these directories create Month_01 to Month_12 case senstive
-- twitter_configs.py inside preprocess_assets direction, which contain documented code and the main file.
-- Twitter Crawling 2018 to 2021.ipynb inside notebooks direction, notebook to run the code that depends on twitter_configs file.
-
-
-### Collecting Tweets

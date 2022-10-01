@@ -150,7 +150,7 @@ def filter_2_get_only_arabic_tweets_column(year, data_dir=DATA_DIR,
 
 ####################### start cleaned and get filtered Arabic tweets using detect language of tweet
 
-def clean_str(text):
+def text_to_clean(text):
     '''
     The function used to:
         - Clean / Normalize Arabic Text
@@ -213,16 +213,16 @@ def clean_str(text):
 
 
 def filter_3_save_cleaned_and_detected_arabic_tweets(all_arabic_tweeets_in_year, year, data_dir=DATA_DIR, 
-    data_preprocessed_dir=DATA_PREPROCESSED_DIR, clean_str=clean_str):
+    data_preprocessed_dir=DATA_PREPROCESSED_DIR, text_to_clean=text_to_clean):
     '''
-    The function used to handle list of text using the clean_str function above, and other preprocess.
+    The function used to handle list of text using the text_to_clean function above, and other preprocess.
     
     Argument
         tweets                : list, of tweets we need to handle
         year                  : strin, in which year these tweets are
         data_dir              : path, the main dierction of the data
         data_preprocessed_dir : path, The direction we save the cleaned tweets in
-        clean_str             : function, the function defined above to clean text
+        text_to_clean             : function, the function defined above to clean text
 
     '''
     
@@ -236,8 +236,8 @@ def filter_3_save_cleaned_and_detected_arabic_tweets(all_arabic_tweeets_in_year,
     # loop over tweets in the list
     for i, tweet in enumerate(all_arabic_tweeets_in_year):
 
-        # call the clean_str function to clean tweet
-        tweet                                   = clean_str(tweet)
+        # call the text_to_clean function to clean tweet
+        tweet                                   = text_to_clean(tweet)
         
         # try to detect tweet language and save only Arabic tweets
         try:
@@ -292,7 +292,7 @@ def filter_3_clean_get_arabic_tweets_by_detect_language(year, file_name="arabic_
     all_arabic_tweeets_in_year = list(readed_file['tweets'])
     # print(len(all_arabic_tweeets_in_year))
     _                          = filter_3_save_cleaned_and_detected_arabic_tweets(all_arabic_tweeets_in_year, year, 
-                                        data_dir, data_preprocessed_dir, clean_str=clean_str)
+                                        data_dir, data_preprocessed_dir, text_to_clean=text_to_clean)
     return True
 
 
