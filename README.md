@@ -8,11 +8,11 @@ This work compared to famous paper AraVec by Abu Bakr and his teammates and othe
 
 ## Full-Gram Models (Word Count 100)
 
-| Description | Tweets No. | Tokens No. | Vocab No. | Vec-Size | Model Download Link |
+| Description | Tweets No. | Vocab No. | Vec-Size | Model Download Link |
 | --- | --- | --- | --- |  --- | --- |
-| Twitter CBOW | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1yE-QBrrcVtoGLk3aNqTAaVG1US3VrJzL?usp=sharing) |
-| Twitter Skip-Gram | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/1WE_A2vD0_uBJmPBXfO-vJAxJhFFyDF4M?usp=sharing) |
-| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/1WE_A2vD0_uBJmPBXfO-vJAxJhFFyDF4M?usp=sharing) |
+| Twitter CBOW | 189,141,269 | 2,027,042 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1yE-QBrrcVtoGLk3aNqTAaVG1US3VrJzL?usp=sharing) |
+| Twitter Skip-Gram | 189,141,269 | 2,027,042 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/1WE_A2vD0_uBJmPBXfO-vJAxJhFFyDF4M?usp=sharing) |
+| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 2,027,042 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/1WE_A2vD0_uBJmPBXfO-vJAxJhFFyDF4M?usp=sharing) |
 
 
 
@@ -20,20 +20,20 @@ This work compared to famous paper AraVec by Abu Bakr and his teammates and othe
 
 ## Full-Gram Models (Word Count 300) 
 
-| Description | Tweets No. | Tokens No. | Vocab No. | Vec-Size | Model Download Link |
+| Description | Tweets No. | Vocab No. | Vec-Size | Model Download Link |
 | --- | --- | --- | --- |  --- | --- |
-| Twitter CBOW | 189,141,269 | 88,019,456 | 561,273 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1zkzBhVlb0hTnN5bU59HTGFOh2w4Wj_Pq?usp=sharing) |
-| Twitter Skip-Gram | 189,141,269 | 88,019,456 | 561,273 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/1Xov6HTWUuZ3bBHtzFFE_zbA2AZ-9pdBF?usp=sharing) |
-| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 88,019,456 | 561,273 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/1eVtFEcbzFPfg9wah4rw1w9ik-E4QGEl1?usp=sharing) |
+| Twitter CBOW | 189,141,269 | 561,273 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1zkzBhVlb0hTnN5bU59HTGFOh2w4Wj_Pq?usp=sharing) |
+| Twitter Skip-Gram | 189,141,269 | 561,273 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/1Xov6HTWUuZ3bBHtzFFE_zbA2AZ-9pdBF?usp=sharing) |
+| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 561,273 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/1eVtFEcbzFPfg9wah4rw1w9ik-E4QGEl1?usp=sharing) |
 
 
 ## Uni-Gram Models (Word Count 100) 
 
-| Description | Tweets No. | Tokens No. | Vocab No. | Vec-Size | Model Download Link |
+| Description | Tweets No. | Vocab No. | Vec-Size | Model Download Link |
 | --- | --- | --- | --- |  --- | --- |
-| Twitter CBOW | 189,141,269 | 88,019,456 | 274,006 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1CPfi3qIDiz3CnOjrsCTfaGUs79lU11jR?usp=sharing) |
-| Twitter Skip-Gram | 189,141,269 | 88,019,456 | 274,006 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/13nHCDmrp_x5yv_JrB6zl1pR99gO0Mg5q?usp=sharing) |
-| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 88,019,456 | 274,006 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/134Il9Addbc2DTaVjHN_4NXQZ2U2pnk85?usp=sharing) |
+| Twitter CBOW | 189,141,269 | 274,006 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1CPfi3qIDiz3CnOjrsCTfaGUs79lU11jR?usp=sharing) |
+| Twitter Skip-Gram | 189,141,269 |  274,006 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/13nHCDmrp_x5yv_JrB6zl1pR99gO0Mg5q?usp=sharing) |
+| Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 274,006 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/134Il9Addbc2DTaVjHN_4NXQZ2U2pnk85?usp=sharing) |
 
 
 ## How to use to get Similar words & others
