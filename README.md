@@ -161,6 +161,8 @@ _ = word_display(tsne_df_scale, NER_WORDS, "NER_WORDS.png")
 |Dr.Mohammed Skip Gram Negative Sampling | No Model | No Model |
 
 
+### 3 paper link to cite
+
 ## How to use to train your ML or DL Model
 
 Once you download the model you need, check the "test_models/", you will see different ML models and DL models that you can train with the related datasets.
