@@ -127,10 +127,19 @@ _ = word_display(tsne_df_scale, NER_WORDS, "NER_WORDS.png")
 <img src="images/NER_WORDS_2.png">
 
 
-## Model & Data Set 
+## Coronavirus Dataset
 
-
-
+| ML/Word2Vec  | DL Model F1_score | ML Model F1_score| 
+| --- | --- | --- |
+|Our CBOW | 93% | 90% |
+|Eng. Abo Bakr CBOW | 87% | 88% |
+|Dr.Mohammed CBOW | 90% | 86% |
+|Our Skip-Gram | 91% | 87% |
+|Eng.Abo Bakr  Skip Gram | 89% | 86% |
+|Dr.Mohammed  Skip Gram | 87% | 84% |
+|Our Skip Gram Negative Sampling | 93% | 92% |
+|Eng. Abo Bakr Skip Gram Negative Sampling | No Model | No Model |
+|Dr.Mohammed Skip Gram Negative Sampling | No Model | No Model |
 ## How to use to train your ML or DL Model
 
 Once you download the model you need, check the "test_models/", you will see different ML models and DL models that you can train with the related datasets.
