@@ -11,7 +11,6 @@ This work compared to famous paper AraVec by Abu Bakr and his teammates and othe
 | --- | --- | --- | --- |  --- | --- |
 | Twitter CBOW | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter CBOW-300d](https://drive.google.com/drive/folders/1zkzBhVlb0hTnN5bU59HTGFOh2w4Wj_Pq?usp=sharing) |
 | git diff | Show file differences that haven't been staged |
-
 | Twitter Skip-Gram | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter Skip-Gram-300d](https://drive.google.com/drive/folders/1Xov6HTWUuZ3bBHtzFFE_zbA2AZ-9pdBF?usp=sharing) |
 
 | Twitter Skip-Gram-Negative-Sampling | 189,141,269 | 7,019,276,208 | 2,027,042 | 300-d | [Twitter Skip-Gram-Negative-Sampling-300d](https://drive.google.com/drive/folders/1eVtFEcbzFPfg9wah4rw1w9ik-E4QGEl1?usp=sharing) |
