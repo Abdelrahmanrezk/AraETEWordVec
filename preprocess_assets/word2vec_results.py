@@ -25,7 +25,7 @@ NER_WORDS = ["نت", "انستجرام", "فيسبوك", "IT", "HR", "AI", "را
 
 
 
-def init_graph_style(figsize=(10, 8), graph_style=['dark_background']):
+def init_graph_style(figsize=(10, 8), graph_style=['fivethirtyeight']):
 	plt.style.use(graph_style)
 	plt.figure(figsize=figsize)
 	plt.axis('off')
@@ -62,14 +62,14 @@ def tsne_graph(model, symbols,n_iter, learning_rate):
 
 def word_display(tsne_df_scale, words, image_name_to_save):
 
-	plt.scatter(tsne_df_scale.iloc[:, 0], tsne_df_scale.iloc[:, 1], marker='P',s=9, c="red") 
+	plt.scatter(tsne_df_scale.iloc[:, 0], tsne_df_scale.iloc[:, 1], marker='P',s=13, c="red") 
 
 	for i, word in enumerate(words):
 	    # handle Arabic words to display from right to left and as complete word not just separate chars
 	    word = arabic_reshaper.reshape(word) # handle arabic words on ploting
 	    word = get_display(word)
 	    # plot each word beside its point
-	    plt.annotate(word, xy=(tsne_df_scale.iloc[i, 0], tsne_df_scale.iloc[i, 1]),fontsize=15, color='white')
+	    plt.annotate(word, xy=(tsne_df_scale.iloc[i, 0], tsne_df_scale.iloc[i, 1]),fontsize=15, color='black')
 	plt.savefig('images/' + image_name_to_save)
 
 	return True
